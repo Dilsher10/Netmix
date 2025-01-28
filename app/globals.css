@@ -19,3 +19,79 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.hero {
+  background: url('/slider.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home2 {
+  background: url('/home2.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.home3 .listDiv {
+  background: url('/price.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.home3 .listDiv:hover{
+  background: #262937;
+}
+
+
+
+.priceSec .box{
+  padding: 4rem;
+  cursor: pointer;
+}
+.priceSec .icon{
+  font-size: 1px !important;
+}
+.priceSec #boxOne {
+  background: url('/price1.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.priceSec #boxOne:hover{
+  background: #2cffc8;
+}
+
+.priceSec #boxTwo {
+  background: url('/price2.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.priceSec #boxTwo:hover{
+  background: #262937;
+}
+
+.priceSec #boxThree {
+  background: url('/price3.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.priceSec #boxThree:hover{
+  background: #e1ff19;
+}
+
+
+.conSec{
+  background: url('/copyright.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
