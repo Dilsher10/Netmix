@@ -42,19 +42,21 @@ body {
   cursor: pointer;
 }
 
-.home3 .listDiv:hover{
+.home3 .listDiv:hover {
   background: #262937;
 }
 
 
 
-.priceSec .box{
+.priceSec .box {
   padding: 4rem;
   cursor: pointer;
 }
-.priceSec .icon{
+
+.priceSec .icon {
   font-size: 1px !important;
 }
+
 .priceSec #boxOne {
   background: url('/price1.jpg');
   background-size: cover;
@@ -62,7 +64,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.priceSec #boxOne:hover{
+.priceSec #boxOne:hover {
   background: #2cffc8;
 }
 
@@ -73,7 +75,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.priceSec #boxTwo:hover{
+.priceSec #boxTwo:hover {
   background: #262937;
 }
 
@@ -84,14 +86,50 @@ body {
   background-repeat: no-repeat;
 }
 
-.priceSec #boxThree:hover{
+.priceSec #boxThree:hover {
   background: #e1ff19;
 }
 
 
-.conSec{
+.conSec {
   background: url('/copyright.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+
+
+.Slider {
+  background: url('/slider-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+a.button {
+  margin: 20px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.arrow {
+  color: #2cffc8;
+}
+.arrow::after {
+  display: inline-block;
+  padding-left: 5px;
+  content: "➞";
+  transition: transform 0.3s ease-out;
+  position: relative;
+  top: 2px;
+}
+.arrow:hover {
+  color: #e1ff19;
+}
+.arrow:hover::after {
+  transform: translateX(4px);
 }

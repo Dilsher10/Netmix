@@ -1,8 +1,9 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
-import { faPhone, faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
+import ServiceSlider from "./_components/ServiceSlider";
 
 export default function Home() {
   return (
@@ -58,7 +59,7 @@ export default function Home() {
 
                   <div className="hidden sm:flex">
                     <a className="rounded-full bg-[#2cffc8] p-4 hover:bg-[#e1ff19]" href="#">
-                      <Image src="/phone.png" alt="phone" width={20} height={20}/>
+                      <Image src="/phone.png" alt="phone" width={20} height={20} />
                     </a>
                   </div>
                 </div>
@@ -82,10 +83,6 @@ export default function Home() {
           </div>
         </div>
       </header>
-
-
-
-      {/* Hero */}
 
 
       <section className="hero">
@@ -163,6 +160,17 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Servive Slider */}
+
+      <section className="Slider h-fit">
+        <div className="container">
+          <h2 className="text-white text-4xl font-extrabold text-center py-10">Explore the Netmix unlimited possibilities</h2>
+          <div className="mx-auto max-w-screen-xl">
+          <ServiceSlider />
+          </div>
+        </div>
+      </section>
 
       {/* Home 4 */}
       <section className="priceSec">
