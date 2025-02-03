@@ -155,7 +155,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section>
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <h1>Hiii</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur provident optio velit quasi non aperiam voluptatum? Obcaecati dolorem impedit consectetur!</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+
+      {/* Servive Slider */}
+
+      <section className="Slider h-[700px] mt-14">
+        <div className="container">
+          <h2 className="text-white text-4xl font-extrabold text-center pb-20 mx-auto max-w-screen-xl w-[500px]">Explore the Netmix unlimited possibilities</h2>
+          <div className="mx-auto max-w-screen-xl">
+            <ServiceSlider />
+          </div>
+        </div>
+      </section>
+    
 
       {/* Home 4 */}
       <section className="priceSec">
