@@ -14,6 +14,11 @@
   }
 }
 
+*{
+  padding: 0;
+  margin: 0;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -121,6 +126,7 @@ a.button {
 .arrow {
   color: #2cffc8;
 }
+
 .arrow::after {
   display: inline-block;
   padding-left: 5px;
@@ -129,25 +135,40 @@ a.button {
   position: relative;
   top: 2px;
 }
+
 .arrow:hover {
   color: #e1ff19;
 }
+
 .arrow:hover::after {
   transform: translateX(4px);
 }
 
-.slick-dots li.slick-active button:before{
+.slick-dots li.slick-active button:before {
   color: #e1ff19 !important;
 }
 
-.slick-dots li button:before{
+.slick-dots li button:before {
   color: #fff !important;
 }
 
-.slick-dots li button:before{
+.slick-dots li button:before {
   font-size: 10px !important;
 }
 
-.slick-dots{
+.slick-dots {
   bottom: -5em !important;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .slick-dots {
+    bottom: -3em !important;
+  }
+
+  .slick-next {
+    right: 0 !important;
+    display: none !important;
+  }
 }
