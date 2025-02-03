@@ -155,17 +155,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <h1>Hiii</h1>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur provident optio velit quasi non aperiam voluptatum? Obcaecati dolorem impedit consectetur!</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
 
       {/* Servive Slider */}
 
