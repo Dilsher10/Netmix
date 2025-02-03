@@ -105,6 +105,8 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
 }
 
 
@@ -132,4 +134,20 @@ a.button {
 }
 .arrow:hover::after {
   transform: translateX(4px);
+}
+
+.slick-dots li.slick-active button:before{
+  color: #e1ff19 !important;
+}
+
+.slick-dots li button:before{
+  color: #fff !important;
+}
+
+.slick-dots li button:before{
+  font-size: 10px !important;
+}
+
+.slick-dots{
+  bottom: -5em !important;
 }

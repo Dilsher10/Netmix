@@ -51,7 +51,7 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 <div className="sm:flex sm:gap-4">
                   <a
-                    className="rounded-full bg-[#e1ff19] px-8 py-4 text-sm font-medium text-black shadow"
+                    className="rounded-full bg-[#e1ff19] px-8 py-4 text-sm font-medium text-black shadow hover:bg-[#2cffc8]"
                     href="#"
                   >
                     Get Started
@@ -129,21 +129,16 @@ export default function Home() {
       <section className="home3 mt-16">
         <div className="mx-auto max-w-screen-xl py-8">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
-            <div>
-              <div className="max-w-lg md:max-w-none">
-                <h2 className="text-4xl font-extrabold text-[#262937] pb-10">
-                  Experience the magic of technology
-                </h2>
-                <p className="pb-10 text-gray-700">
-                  Netmix entertainment means more than just TV or Internet — get streaming speeds, top shows, easy access to Netflix® favorites, and so much more. We’re local members to the communities we serve which allows us to get your services up and running in a day.
-                </p>
-                <p className="pb-10 text-gray-700">
-                  Netmix entertainment means more than just TV or Internet — get streaming speeds, top shows, easy access to Netflix® favorites, and so much more. We’re local members to the communities we serve which allows us to get your services up and running in a day.
-                </p>
-                <Link href="" className="bg-[#e1ff19] px-8 py-4 rounded-full font-semibold hover:bg-[#2cffc8]">Contact Us</Link>
-              </div>
+            <div className="max-w-lg md:max-w-none">
+              <Image src="/slider.jpg" alt="" width={600} height={300}/>
+              <h2 className="text-3xl font-extrabold text-[#262937] pb-5 mt-5">
+                Experience the magic of technology
+              </h2>
+              <p className="pb-8 text-gray-500 pr-10">
+                Netmix entertainment means more than just TV or Internet — get streaming speeds, top shows, easy access to Netflix® favorites, and so much more. We’re local members to the communities we serve which allows us to get your services up and running in a day.
+              </p>
+              <Link href="" className="bg-[#e1ff19] px-8 py-4 rounded-full font-semibold hover:bg-[#2cffc8]">Contact Us</Link>
             </div>
-
             <div className="listDiv p-10">
               <h3 className="text-3xl text-white font-extrabold py-5">Connect your phone with mobile WIFI</h3>
               <span className="text-2xl text-[#2cffc8] font-bold">from $69.99/ mo</span>
@@ -161,16 +156,6 @@ export default function Home() {
       </section>
 
 
-      {/* Servive Slider */}
-
-      <section className="Slider h-fit">
-        <div className="container">
-          <h2 className="text-white text-4xl font-extrabold text-center py-10">Explore the Netmix unlimited possibilities</h2>
-          <div className="mx-auto max-w-screen-xl">
-          <ServiceSlider />
-          </div>
-        </div>
-      </section>
 
       {/* Home 4 */}
       <section className="priceSec">
@@ -188,7 +173,7 @@ export default function Home() {
                   <li className="pb-3 text-gray-800 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
                 </ul>
                 <p className="text-2xl text-gray-900 font-bold">from $69.99/mo</p>
-                <button className="bg-gray-800 text-white py-4 px-10 rounded-full text-[15px] mt-10 hover:bg-white">View plans</button>
+                <button className="bg-gray-800 text-white py-4 px-10 rounded-full text-[15px] mt-10 hover:bg-white hover:text-gray-900">View plans</button>
               </div>
               <div className="box" id="boxTwo">
                 <h3 className="text-2xl font-extrabold text-white">Broadband & WIFI</h3>
@@ -212,7 +197,7 @@ export default function Home() {
                   <li className="pb-3 text-gray-800 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
                 </ul>
                 <p className="text-2xl text-gray-900 font-bold">from $69.99/mo</p>
-                <button className="bg-gray-800 text-white py-4 px-10 rounded-full text-[15px] mt-10 hover:bg-white">View plans</button>
+                <button className="bg-gray-800 text-white py-4 px-10 rounded-full text-[15px] mt-10 hover:bg-white hover:text-gray-900">View plans</button>
               </div>
             </div>
           </div>

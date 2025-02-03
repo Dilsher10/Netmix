@@ -10,45 +10,65 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 export default function ServiceSlider() {
   var settings = {
     dots: true,
+    arrow: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   return (
     <Slider {...settings}>
       <div className="text-center">
-        <Image src="/remote.png" width={50} height={50} className="mx-auto" />
+        <Image src="/remote.png" width={60} height={60} className="mx-auto" />
         <h3 className="text-white py-5 text-[18px] font-bold">Home broadband</h3>
         <p className="text-gray-400 px-7 text-sm pb-5">We offer a fantastic range of client-oriented home broadband services</p>
         <Link href="" className="button arrow text-[#2cffc8] text-sm">Read more</Link>
       </div>
       <div className="text-center">
-        <Image src="/remote.png" width={50} height={50} className="mx-auto" />
+        <Image src="/remote.png" width={60} height={60} className="mx-auto" />
         <h3 className="text-white py-5 text-[18px] font-bold">Home broadband</h3>
         <p className="text-gray-400 px-7 text-sm pb-5">We offer a fantastic range of client-oriented home broadband services</p>
         <Link href="" className="button arrow text-[#2cffc8] text-sm">Read more</Link>
       </div>
       <div className="text-center">
-        <Image src="/remote.png" width={50} height={50} className="mx-auto" />
+        <Image src="/remote.png" width={60} height={60} className="mx-auto" />
         <h3 className="text-white py-5 text-[18px] font-bold">Home broadband</h3>
         <p className="text-gray-400 px-7 text-sm pb-5">We offer a fantastic range of client-oriented home broadband services</p>
         <Link href="" className="button arrow text-[#2cffc8] text-sm">Read more</Link>
       </div>
       <div className="text-center">
-        <Image src="/remote.png" width={50} height={50} className="mx-auto" />
+        <Image src="/remote.png" width={60} height={60} className="mx-auto" />
         <h3 className="text-white py-5 text-[18px] font-bold">Home broadband</h3>
         <p className="text-gray-400 px-7 text-sm pb-5">We offer a fantastic range of client-oriented home broadband services</p>
         <Link href="" className="button arrow text-[#2cffc8] text-sm">Read more</Link>
       </div>
       <div className="text-center">
-        <Image src="/remote.png" width={50} height={50} className="mx-auto" />
-        <h3 className="text-white py-5 text-[18px] font-bold">Home broadband</h3>
-        <p className="text-gray-400 px-7 text-sm pb-5">We offer a fantastic range of client-oriented home broadband services</p>
-        <Link href="" className="button arrow text-[#2cffc8] text-sm">Read more</Link>
-      </div>
-      <div className="text-center">
-        <Image src="/remote.png" width={50} height={50} className="mx-auto" />
+        <Image src="/remote.png" width={60} height={60} className="mx-auto" />
         <h3 className="text-white py-5 text-[18px] font-bold">Home broadband</h3>
         <p className="text-gray-400 px-7 text-sm pb-5">We offer a fantastic range of client-oriented home broadband services</p>
         <Link href="" className="button arrow text-[#2cffc8] text-sm">Read more</Link>
