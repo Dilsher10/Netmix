@@ -4,16 +4,18 @@ import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import ServiceSlider from "./_components/ServiceSlider";
+import LogoSlider from "./_components/LogoSlider";
 
 export default function Home() {
   return (
     <>
       {/* Navbar */}
+
       <header className="absolute z-10 w-full mt-5 lg:mt-10">
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-0">
           <div className="flex h-16 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-12">
-              <Link className="block text-white font-extrabold text-[17px] lg:text-2xl" href="/">
+              <Link className="block text-white font-extrabold text-[17px] lg:text-2xl logo" href="/">
                 LISAM SOLUTIONS LLC
               </Link>
             </div>
@@ -26,44 +28,36 @@ export default function Home() {
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#"> Packages </a>
                   </li>
-
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#"> About Us </a>
                   </li>
-
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#"> Services </a>
                   </li>
-
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#"> Features </a>
                   </li>
-
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#"> News </a>
                   </li>
-
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#"> Contacts </a>
                   </li>
                 </ul>
               </nav>
               <div className="flex items-center gap-4">
-                <div className="sm:flex sm:gap-4">
-                  <a
-                    className="rounded-full bg-[#e1ff19] px-8 py-4 text-sm font-medium text-black shadow hover:bg-[#2cffc8]"
+                <div className="sm:flex sm:gap-4 navBtn">
+                  <a className="rounded-full bg-white px-8 py-4 text-sm font-medium text-black shadow hover:bg-gray-800 hover:text-white"
                     href="tel:+1-(888)-845-0301"
                   >
                     Get Started
                   </a>
-
-                  <div className="hidden sm:flex">
-                    <a className="rounded-full bg-[#2cffc8] p-4 hover:bg-[#e1ff19]" href="tel:+1-(888)-845-0301">
+                  <div className="hidden sm:flex navBtn">
+                    <a className="rounded-full bg-white p-4 hover:bg-[#2cffc8]" href="tel:+1-(888)-845-0301">
                       <Image src="/phone.png" alt="phone" width={20} height={20} />
                     </a>
                   </div>
                 </div>
-
                 <div className="block md:hidden">
                   <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
                     <svg
@@ -84,6 +78,7 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Hero */}
 
       <section className="hero">
         <div className="relative mx-auto max-w-screen-xl px-4 pt-32 pb-10 lg:py-32 sm:px-6 lg:flex lg:h-[800px] lg:items-center lg:px-0">
@@ -97,31 +92,24 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-5 lg:gap-20 text-center items-center pb-20">
               <div className="flex gap-2 items-center">
                 <Image src="/remote.png" alt="tv" width={60} height={60} />
-                <p className="text-3xl text-[#e1ff19] font-bold mt-5">$39.99 /mo</p>
+                <p className="text-3xl text-[#2cffc8] font-bold mt-5">$39.99 /mo</p>
               </div>
               <div className="flex gap-2 items-center">
                 <Image src="/router.png" alt="tv" width={70} height={70} />
                 <p className="text-3xl text-white font-bold mt-5">free /1 month</p>
               </div>
             </div>
-            <Link href="tel:+1-(888)-845-0301" className="bg-[#2cffc8] px-8 py-5 rounded-full text-sm mt-10 hover:bg-[#e1ff19]">Get Fiber Internet</Link>
+            <Link href="tel:+1-(888)-845-0301" className="bg-white px-8 py-5 rounded-full text-sm mt-10 hover:bg-gray-900 hover:text-white">Get Fiber Internet</Link>
           </div>
         </div>
       </section>
 
+      {/* Logo Slider */}
 
-      {/* Home 2 */}
-
-      <div className="home2 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 text-center lg:text-left lg:px-36 py-14">
-        <div className="">
-          <h2 className="text-4xl font-bold mb-5 text-[#262937]">Call us now and connect</h2>
-          <Link href="tel:+1-(888)-845-0301" className="text-2xl lg:text-4xl font-bold text-white hover:text-[#262937]">(888) 845 0301</Link>
-        </div>
-        <div className="lg:text-right mt-10">
-          <Link href="tel:+1-(888)-845-0301" className="bg-white text-black p-5 rounded-full hover:bg-[#262937] hover:text-white">Check coverage in your area</Link>
-        </div>
-      </div>
-
+      <section className="slickSec mx-auto px-4 sm:px-6 sm:py-8 lg:px-8 lg:py-8">
+        <h2 className="mt-20 lg:text-4xl sm:text-2xl">Clients We Work With</h2>
+        <LogoSlider />
+      </section>
 
       {/* Home 3 */}
 
@@ -136,7 +124,7 @@ export default function Home() {
               <p className="pb-8 text-gray-500 pr-10 px-3 lg:px-0">
                 LISAM SOLUTIONS LLC entertainment means more than just TV or Internet — get streaming speeds, top shows, easy access to Netflix® favorites, and so much more. We’re local members to the communities we serve which allows us to get your services up and running in a day.
               </p>
-              <Link href="tel:+1-(888)-845-0301" className="bg-[#e1ff19] px-8 py-4 rounded-full font-semibold hover:bg-[#2cffc8] ml-2 lg:ml-0">Contact Us</Link>
+              <Link href="tel:+1-(888)-845-0301" className="bg-gray-800 border border-gray-800 text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 ml-2 lg:ml-0">Contact Us</Link>
             </div>
             <div className="listDiv p-10">
               <h3 className="text-2xl lg:text-3xl text-white font-extrabold py-5">Connect your phone with mobile WIFI</h3>
@@ -148,12 +136,11 @@ export default function Home() {
                 <li className="pb-3 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home security</li>
                 <li className="pb-3 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
               </ul>
-              <button className="bg-[#2cffc8] text-gray-900 py-3 px-5 rounded-full text-sm font-semibold">View mobile wifi plans</button>
+              <button className="bg-white text-gray-900 py-3 px-5 rounded-full text-sm font-semibold hover:bg-gray-900 hover:text-white">View mobile wifi plans</button>
             </div>
           </div>
         </div>
       </section>
-
 
       {/* Servive Slider */}
 
@@ -166,24 +153,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Price Section */}
 
-      {/* Home 4 */}
-      <section className="priceSec">
+      <section className="priceSec mb-16">
         <div className="container">
           <div className="wrapper mx-auto max-w-screen-xl">
-            <h2 className="text-center text-2xl lg:text-4xl font-extrabold py-10 lg:py-20 text-gray-700">Discover Our Best Plans</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-8">
+            <h2 className="text-center text-2xl lg:text-4xl font-extrabold py-10 lg:py-16 lg:mt-5 text-gray-700">Discover Our Best Plans</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 lg:grid-cols-3 lg:gap-8 mx-auto">
               <div className="box" id="boxOne">
-                <h3 className="text-2xl font-extrabold text-gray-900">Broadband & WIFI</h3>
+                <h3 className="text-2xl font-extrabold text-white">Broadband & WIFI</h3>
                 <ul className="py-7 text-white text-[15px] mt-5">
-                  <li className="pb-3 text-gray-800 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
-                  <li className="pb-3 text-gray-800 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Satellite TV</li>
-                  <li className="pb-3 text-gray-800 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Cell phone connection</li>
-                  <li className="pb-3 text-gray-800 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home security</li>
-                  <li className="pb-3 text-gray-800 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
+                  <li className="pb-3 text-white flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
+                  <li className="pb-3 text-white flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Satellite TV</li>
+                  <li className="pb-3 text-white flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Cell phone connection</li>
+                  <li className="pb-3 text-white flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home security</li>
+                  <li className="pb-3 text-white flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
                 </ul>
-                <p className="text-2xl text-gray-900 font-bold pb-20">from $39.99/mo</p>
-                <Link href="tel:+1-(888)-845-0301" className="bg-gray-800 text-white py-5 px-10 rounded-full text-[15px] mt-10 hover:bg-white hover:text-gray-900">View Plans</Link>
+                <p className="text-2xl text-white font-bold pb-20">from $39.99/mo</p>
+                <Link href="tel:+1-(888)-845-0301" className="bg-white text-gray-800 py-5 px-10 rounded-full text-[15px] mt-10 hover:bg-gray-900 hover:text-white">View Plans</Link>
               </div>
               <div className="box" id="boxTwo">
                 <h3 className="text-2xl font-extrabold text-white">Fiber Internet</h3>
@@ -195,246 +182,26 @@ export default function Home() {
                   <li className="pb-3 text-white flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
                 </ul>
                 <p className="text-2xl text-white font-bold pb-20">from $49.99/mo</p>
-                <Link href="tel:+1-(888)-845-0301" className="bg-[#2cffc8] text-gray-800 py-5 px-10 rounded-full text-[15px] mt-10 hover:bg-[#e1ff19]">View Plans</Link>
+                <Link href="tel:+1-(888)-845-0301" className="bg-white text-gray-800 py-5 px-10 rounded-full text-[15px] mt-10 hover:bg-gray-900 hover:text-white">View Plans</Link>
               </div>
               <div className="box" id="boxThree">
-                <h3 className="text-2xl font-extrabold text-gray-900">Home Security</h3>
+                <h3 className="text-2xl font-extrabold text-white">Home Security</h3>
                 <ul className="py-7 text-white text-[15px] mt-5">
-                  <li className="pb-3 text-gray-800 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
-                  <li className="pb-3 text-gray-800 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Satellite TV</li>
-                  <li className="pb-3 text-gray-800 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Cell phone connection</li>
-                  <li className="pb-3 text-gray-800 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home security</li>
-                  <li className="pb-3 text-gray-800 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
+                  <li className="pb-3 text-white flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
+                  <li className="pb-3 text-white flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Satellite TV</li>
+                  <li className="pb-3 text-white flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Cell phone connection</li>
+                  <li className="pb-3 text-white flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home security</li>
+                  <li className="pb-3 text-white flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
                 </ul>
-                <p className="text-2xl text-gray-900 font-bold pb-20">from $59.99/mo</p>
-                <Link href="tel:+1-(888)-845-0301" className="bg-gray-800 text-white py-5 px-10 rounded-full text-[15px] hover:bg-white hover:text-gray-900">View Plans</Link>
+                <p className="text-2xl text-white font-bold pb-20">from $59.99/mo</p>
+                <Link href="tel:+1-(888)-845-0301" className="bg-white text-gray-800 py-5 px-10 rounded-full text-[15px] hover:bg-gray-900 hover:text-white">View Plans</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-
-
-      {/* Testimonials */}
-
-      <section className="bg-white">
-        <div className="mx-auto max-w-screen-xl py-12 lg:py-24">
-          <h2 className="text-center text-2xl lg:text-4xl font-extrabold tracking-tight text-[#262937] sm:text-4xl">
-            What Clients Say About Us
-          </h2>
-          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
-            <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-              <div className="flex items-center gap-4">
-                <img
-                  alt=""
-                  src="./Tes-1.jpg"
-                  className="size-14 rounded-full object-cover"
-                />
-                <div>
-                  <div className="flex justify-center gap-0.5 text-green-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                  </div>
-
-                  <p className="mt-0.5 text-lg font-medium text-gray-900">Samantha Atkins</p>
-                </div>
-              </div>
-              <p className="mt-4 text-gray-700">
-              I’ve been using Fiber services for half a year now and I am completely satisfied with the quality of their Internet and TV connection. High speed,  and a variety of packages to choose from make it comfortable.
-              </p>
-            </blockquote>
-            <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-              <div className="flex items-center gap-4">
-                <img
-                  alt=""
-                  src="./Tes-2.jpg"
-                  className="size-14 rounded-full object-cover"
-                />
-
-                <div>
-                  <div className="flex justify-center gap-0.5 text-green-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                  </div>
-
-                  <p className="mt-0.5 text-lg font-medium text-gray-900">John Walker</p>
-                </div>
-              </div>
-
-              <p className="mt-4 text-gray-700">
-              Customer support is splendid! Had a connection problem after a power cut and they solved it in less than half an hour after my request. Thanks to Fiber I can watch my favorite movies and new ones in great quality.
-              </p>
-            </blockquote>
-            <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-              <div className="flex items-center gap-4">
-                <img
-                  alt=""
-                  src="./Tes-3.jpg"
-                  className="size-14 rounded-full object-cover"
-                />
-
-                <div>
-                  <div className="flex justify-center gap-0.5 text-green-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                  </div>
-
-                  <p className="mt-0.5 text-lg font-medium text-gray-900">Linda Patterson</p>
-                </div>
-              </div>
-              <p className="mt-4 text-gray-700">
-              I like the Fiber app. The navigation is simple and all the necessary information is one click away. It also reminds you to pay every month and there is a new service to create personalised package just for you.
-              </p>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
+      {/* Contact Section */}
 
       <section className="conSec">
         <div className="mx-auto max-w-screen-xl px-4 py-10 lg:py-32 lg:flex lg:h-fit lg:items-center">
@@ -448,7 +215,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <a
-                className="block w-full rounded-full bg-[#2cffc8] px-12 py-4 text-sm font-medium text-gray-900 shadow hover:bg-[#e1ff19] focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+                className="block w-full rounded-full bg-white px-12 py-4 text-sm font-medium text-gray-900 shadow hover:bg-gray-900 hover:text-white focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
                 href="tel:+1-(888)-845-0301"
               >
                 Get Started Now
@@ -458,10 +225,7 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* Footer */}
-
 
       <footer className="bg-[#262937]">
         <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
@@ -470,18 +234,16 @@ export default function Home() {
               <div className="flex justify-center text-teal-600 sm:justify-start">
                 <a href="/" className="text-white font-extrabold text-2xl">LISAM SOLUTIONS LLC</a>
               </div>
-
               <p className="mt-6 max-w-md text-center leading-relaxed text-[#a8aec4] sm:max-w-xs sm:text-left">
                 This website is for advertising purposes only. All content here is solely for promotional display.
               </p>
-
               <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
                 <li>
                   <a
                     href="#"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-[#2cffc8] transition hover:text-[#e1ff19]"
+                    className="text-[#2cffc8] transition hover:text-white"
                   >
                     <span className="sr-only">Facebook</span>
                     <svg className="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -493,13 +255,12 @@ export default function Home() {
                     </svg>
                   </a>
                 </li>
-
                 <li>
                   <a
                     href="#"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-[#2cffc8] transition hover:text-[#e1ff19]"
+                    className="text-[#2cffc8] transition hover:text-white"
                   >
                     <span className="sr-only">Instagram</span>
                     <svg className="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -511,13 +272,12 @@ export default function Home() {
                     </svg>
                   </a>
                 </li>
-
                 <li>
                   <a
                     href="#"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-[#2cffc8] transition hover:text-[#e1ff19]"
+                    className="text-[#2cffc8] transition hover:text-white"
                   >
                     <span className="sr-only">Twitter</span>
                     <svg className="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -527,13 +287,12 @@ export default function Home() {
                     </svg>
                   </a>
                 </li>
-
                 <li>
                   <a
                     href="#"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-[#2cffc8] transition hover:text-[#e1ff19]"
+                    className="text-[#2cffc8] transition hover:text-white"
                   >
                     <span className="sr-only">GitHub</span>
                     <svg className="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -547,63 +306,51 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:col-span-2">
               <div className="text-center sm:text-left">
                 <p className="text-lg font-extrabold text-white">Customer service</p>
-
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#">
                       Company History
                     </a>
                   </li>
-
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#">
                       Meet the Team
                     </a>
                   </li>
-
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#">
                       Employee Handbook
                     </a>
                   </li>
-
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#"> Careers </a>
                   </li>
                 </ul>
               </div>
-
               <div className="text-center sm:text-left">
                 <p className="text-lg font-extrabold text-white">Useful links</p>
-
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#">
                       Web Development
                     </a>
                   </li>
-
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#"> Web Design </a>
                   </li>
-
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#"> Marketing </a>
                   </li>
-
                   <li>
                     <a className="text-white transition hover:text-[#2cffc8]" href="#"> Google Ads </a>
                   </li>
                 </ul>
               </div>
-
               <div className="text-center sm:text-left">
                 <p className="text-lg font-extrabold text-white">Get in touch</p>
-
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
                     <a
@@ -615,7 +362,6 @@ export default function Home() {
                       <span className="flex-1 text-white">09:00 AM - 17:00 PM</span>
                     </a>
                   </li>
-
                   <li>
                     <a
                       className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
@@ -635,7 +381,6 @@ export default function Home() {
                           d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                         />
                       </svg>
-
                       <span className="flex-1 text-white">+1-(888)-845-0301</span>
                     </a>
                   </li>
@@ -658,7 +403,6 @@ export default function Home() {
                           d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                         />
                       </svg>
-
                       <span className="flex-1 text-white">support@internetcable<br />companies.com</span>
                     </a>
                   </li>
@@ -684,7 +428,6 @@ export default function Home() {
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                     </svg>
-
                     <address className="-mt-0.5 flex-1 not-italic text-white">
                       14402 W Bellfort St apt 132 Sugarland TX 77498
                     </address>
@@ -693,21 +436,17 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           <div className="mt-12 border-t border-gray-100 pt-6">
             <div className="text-center sm:flex sm:justify-between sm:text-left">
               <p className="text-sm text-gray-500">
                 <span className="block sm:inline">All rights reserved.</span>
-
                 <a
                   className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
                   href="#"
                 >
                   Terms & Conditions
                 </a>
-
                 <span>&middot;</span>
-
                 <a
                   className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
                   href="#"
@@ -715,7 +454,6 @@ export default function Home() {
                   Privacy Policy
                 </a>
               </p>
-
               <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">&copy; 2025 LISAM SOLUTIONS LLC</p>
             </div>
           </div>

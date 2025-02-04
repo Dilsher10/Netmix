@@ -14,7 +14,7 @@
   }
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
 }
@@ -33,7 +33,7 @@ body {
 }
 
 .home2 {
-  background: url('/home2.png');
+  background: url('/home.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -53,6 +53,12 @@ body {
 
 
 
+
+.priceSec {
+  display: flex;
+  justify-content: center;
+}
+
 .priceSec .box {
   padding: 4rem;
   cursor: pointer;
@@ -63,14 +69,14 @@ body {
 }
 
 .priceSec #boxOne {
-  background: url('/price1.jpg');
+  background: url('/price2.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .priceSec #boxOne:hover {
-  background: #2cffc8;
+  background: #262937;
 }
 
 .priceSec #boxTwo {
@@ -85,14 +91,14 @@ body {
 }
 
 .priceSec #boxThree {
-  background: url('/price3.jpg');
+  background: url('/price2.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .priceSec #boxThree:hover {
-  background: #e1ff19;
+  background: #262937;
 }
 
 
@@ -112,8 +118,8 @@ body {
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-
 
 
 
@@ -145,7 +151,7 @@ a.button {
 }
 
 .slick-dots li.slick-active button:before {
-  color: #e1ff19 !important;
+  color: #2cffc8 !important;
 }
 
 .slick-dots li button:before {
@@ -162,6 +168,37 @@ a.button {
 
 
 
+
+/* Logo Slider */
+
+.slickSec {
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 0 7% !important;
+}
+
+.slickSec .slick-track {
+  align-items: center;
+  justify-content: center;
+  display: flex !important;
+  margin-top: 10px;
+}
+
+.slickSec .slick-slide img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+.slickSec h2 {
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
 @media only screen and (max-width: 600px) {
   .slick-dots {
     bottom: -3em !important;
@@ -170,5 +207,90 @@ a.button {
   .slick-next {
     right: 0 !important;
     display: none !important;
+  }
+
+  .navBtn {
+    display: none !important;
+  }
+}
+
+
+
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  .priceSec .box {
+    padding: 1.5rem;
+  }
+
+  .navBtn {
+    display: none !important;
+  }
+
+  .logo {
+    font-size: 17px !important;
+  }
+}
+
+
+
+@media only screen and (min-width: 705px) and (max-width: 1380px) {
+  .hero {
+    padding: 3rem !important;
+  }
+
+  header {
+    padding: 0 3rem !important;
+  }
+
+  .home3 {
+    padding: 0 3rem !important;
+  }
+
+  .priceSec {
+    padding: 0 3rem;
+  }
+
+  .logo {
+    font-size: 17px !important;
+  }
+
+  .testSec {
+    padding: 0 3rem !important;
+  }
+
+  .Slider {
+    padding: 0 3rem;
+  }
+}
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .md\:gap-12 {
+    gap: 0rem !important;
+  }
+
+  .gap-10 {
+    gap: 0.5rem !important;
+  }
+
+  .logo {
+    font-size: 15px !important;
+  }
+}
+
+
+
+@media only screen and (min-width: 800px) and (max-width: 1280px) {
+  .md\:gap-12 {
+    gap: 1rem !important;
+  }
+
+  .gap-10 {
+    gap: 0.5rem !important;
+  }
+
+  .logo {
+    font-size: 16px !important;
   }
 }
