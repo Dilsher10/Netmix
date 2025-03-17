@@ -49,34 +49,7 @@ export default function Home() {
 
       {/* Home 3 */}
 
-      <section className="home3 lg:mt-16">
-        <div className="mx-auto max-w-screen-xl py-8">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
-            <div className="max-w-lg md:max-w-none mb-5">
-              <Image src="/slider.jpg" alt="" width={600} height={300} />
-              <h2 className="text-3xl font-extrabold text-[#262937] pb-5 mt-5 px-3 lg:px-0">
-                Experience the magic of technology
-              </h2>
-              <p className="pb-8 text-gray-500 pr-10 px-3 lg:px-0">
-                LISAM SOLUTIONS LLC entertainment means more than just TV or Internet — get streaming speeds, top shows, easy access to Netflix® favorites, and so much more. We’re local members to the communities we serve which allows us to get your services up and running in a day.
-              </p>
-              <Link href="tel:+1-(888)-845-0301" className="bg-gray-800 border border-gray-800 text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 ml-2 lg:ml-0">Contact Us</Link>
-            </div>
-            <div className="listDiv p-10">
-              <h3 className="text-2xl lg:text-3xl text-white font-extrabold py-5">Connect your phone with mobile WIFI</h3>
-              <span className="text-2xl text-[#2cffc8] font-bold">from $39.99/ mo</span>
-              <ul className="py-5 text-white text-[15px]">
-                <li className="pb-3 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
-                <li className="pb-3 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Satellite TV</li>
-                <li className="pb-3 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Cell phone connection</li>
-                <li className="pb-3 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home security</li>
-                <li className="pb-3 flex gap-2"><FontAwesomeIcon icon={faCircleCheck} className="w-5" /> Home broadband</li>
-              </ul>
-              <button className="bg-white text-gray-900 py-3 px-5 rounded-full text-sm font-semibold hover:bg-gray-900 hover:text-white">View mobile wifi plans</button>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       {/* Servive Slider */}
 
